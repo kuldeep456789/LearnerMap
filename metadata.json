@@ -1,0 +1,5 @@
+{
+  "name": "AI Learning Map Generator",
+  "description": "An intelligent web application that generates an AI-powered interactive learning map for any topic the user enters. It helps users explore complex subjects visually and intuitively, turning broad learning goals into structured, guided journeys.",
+  "requestFramePermissions": []
+}
