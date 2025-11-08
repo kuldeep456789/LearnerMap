@@ -3,11 +3,12 @@ import { MapData, LearningLevel } from '../types';
 
 const API_KEY = process.env.API_KEY;
 
-if (!API_KEY) {
-  throw new Error("API_KEY environment variable not set");
-}
-
-const ai = new GoogleGenAI({ apiKey: API_KEY });
+const createClient = () => {
+  if (!API_KEY) {
+    throw new Error("Missing GEMINI_API_KEY environment variable. Set GEMINI_API_KEY in your environment or .env.local file.");
+  }
+  return new GoogleGenAI({ apiKey: API_KEY });
+};
 
 const mapSchema = {
   type: Type.OBJECT,
@@ -114,7 +115,8 @@ export const generateLearningMap = async (topic: string, level: LearningLevel): 
   `;
 
   try {
-    const response = await ai.models.generateContent({
+    const client = createClient();
+    const response = await client.models.generateContent({
       model: 'gemini-2.5-flash',
       contents: prompt,
       config: {
@@ -146,7 +148,8 @@ export const generateRelatedTopics = async (topic: string): Promise<string[]> =>
     `;
     
     try {
-        const response = await ai.models.generateContent({
+        const client = createClient();
+        const response = await client.models.generateContent({
             model: 'gemini-2.5-flash',
             contents: prompt,
             config: {
@@ -169,7 +172,8 @@ export const generateTopicImage = async (topic: string): Promise<string> => {
     const prompt = `An abstract, visually appealing conceptual image representing the topic of "${topic}". Minimalist, dark background, with glowing nodes and connections, in a futuristic, digital style. Should be suitable as a background for a mind map.`;
     
     try {
-        const response = await ai.models.generateContent({
+        const client = createClient();
+        const response = await client.models.generateContent({
             model: 'gemini-2.5-flash-image',
             contents: {
                 parts: [{ text: prompt }],
