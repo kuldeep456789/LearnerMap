@@ -1,4 +1,4 @@
-![img alt](docs/https://github.com/kuldeep456789/LearnerMap/blob/ef1c26a489c20be415cbde1230ecee26ff10586f/thumanail.jpg)
+![Thumbnail](https://raw.githubusercontent.com/kuldeep456789/LearnerMap/ef1c26a489c20be415cbde1230ecee26ff10586f/thumanail.jpg)
 
 
 # fork the Repo
