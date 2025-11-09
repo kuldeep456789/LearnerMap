@@ -1,11 +1,12 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="assets/thumbnail.jpg" />
-</div>
+<!-- <div align="center">
+<img width="1200" height="475" alt="GHBanner" src="dist/assets/thumbnail.png" />
+</div> -->
 
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
+**Prerequisites:**  
+Node.js
 
 1. Install dependencies:
    `npm install`
