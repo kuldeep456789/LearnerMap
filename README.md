@@ -1,5 +1,5 @@
 
-![App Screenshot](dist/assets/screenshot.png)
+<img= src="dist/assets/thumanail.jpg" alt ="thumbnail" width="100px" height="auto"/>
 
 # fork the Repo
 git clone https://github.com/LearnerMap/learners.git
